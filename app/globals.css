@@ -1,11 +1,28 @@
+@import url('https://fonts.cdnfonts.com/css/pp-neue-montreal');
+@import url(https://db.onlinewebfonts.com/c/d6ae884b0a2f1a5346717fc160db2d28?family=Roobert);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url(../components/slider/src/css/base.css);
+@import url(../components/slider/src/css/embla.css);
+@import url(../components/slider/src/css/sandbox.css);
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --ig-primary-background: 0, 0, 0;
+  --ig-primary-button: 0, 149, 246;
+  --ig-primary-button-hover: 24, 119, 242;
+  --ig-primary-icon: 245, 245, 245;
+  --ig-primary-text: 245, 245, 245;
+  --ig-secondary-background: 18, 18, 18;
+  --ig-secondary-button: 250, 250, 250;
+  --ig-secondary-button-background: 54, 54, 54;
+  --ig-secondary-button-hover: 38, 38, 38;
+  --ig-secondary-icon: 142, 142, 142;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,11 +34,32 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(var(--ig-primary-text));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    /* font-family: "carbona-variable", sans-serif;
+font-variation-settings: "slnt" 0, "MONO" 0, "wght" 400; */
+    /* font-family: 'PP Neue Montreal', sans-serif; */
+                                                
+}
+
+
+.x5n08af {
+    color: rgb(var(--ig-primary-text));
+}
+
+.x1n2onr6 {
+    position: relative;
+}
+.x1lliihq {
+    display: block;
+}
+
+.storyBorder {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, 
+                              #fd5949 55%,#d6249f 90%);
 }
