@@ -1,0 +1,99 @@
+[
+    {
+        "posts":[
+            {
+                "username": "soudigitalpb",
+                "pfp": "/images/soudigital/logo/logo1.png",
+                "message": "Esse é o primeiro post do Sou Digital PB! \n\n Foi o primeiro que montei após desevolver a nova marca deles.",
+                "images": [
+                    "/images/soudigital/primeiro post/instagram-banner_01.png",
+                    "/images/soudigital/primeiro post/instagram-banner_02.png",
+                    "/images/soudigital/primeiro post/instagram-banner_03.png"
+                ], 
+                "data": "7 de novembro de 2023"
+            },
+            {
+                "username": "soudigitalpb",
+                "pfp": "/images/soudigital/logo/logo1.png",
+                "message": "Já essa é a marca que desenvolvi para eles. \n\n O rebranding da marca SouDigital foi pensado para refletir a renovação e modernidade da marca. Um dos pontos mais importantes foi a criação de uma identidade moderna e, ao mesmo tempo, pouco genérica, pois isso foi muito ressaltado durante o briefing. \n\n Decidimos adotar o foguete como símbolo principal, pois ele representa a ascensão e o crescimento que vem com os serviços da agência, atrelado à letra \"D\" de digital, principal meio de trabalho da agência hoje. \n\n Já para as cores decidimos por uma paleta diversa, mas que tivesse uma boa sincronia e funcionasse bem em conjunto. Há duas cores principais e duas auxiliares que podem ser intercaladas gerando uma gama enorme de possibilidades.",
+                "images": [
+                    "/images/soudigital/marca/behance-soudigital-1.png",
+                    "/images/soudigital/marca/behance-soudigital-2.png",
+                    "/images/soudigital/marca/behance-soudigital-3.png",
+                    "/images/soudigital/marca/behance-soudigital-4.png",
+                    "/images/soudigital/marca/behance-soudigital-5.png",
+                    "/images/soudigital/marca/behance-soudigital-6.png",
+                    "/images/soudigital/marca/behance-soudigital-8.png"
+                ], 
+                "data": "Algum dia de outubro de 2023"
+            },
+            {
+                "username": "soudigitalpb",
+                "pfp": "/images/soudigital/logo/logo1.png",
+                "message": "Mais um post deles.",
+                "images": [
+                    "/images/soudigital/post-sd.png"
+                ], 
+                "data": "23 de novembro de 2023"
+            },
+            {
+                "username": "soudigitalpb",
+                "pfp": "/images/soudigital/logo/logo1.png",
+                "message": "O mais recente tiveram duas variações (eu gostei mais da primeira mas a segunda que foi escolhida)",
+                "images": [
+                    "/images/soudigital/sd-011223.png",
+                    "/images/soudigital/sd-011223-1.png"
+                ], 
+                "data": "4 de dezembro de 2023"
+            },
+            {
+                "username": "maisedubrasil",
+                "pfp": "/images/maisedu/logo.png",
+                "message": "Esse é um post para a Mais Edu, cliente da SouDigital.",
+                "images": [
+                    "/images/maisedu/primeiro post/primeiro-post-mais-edu_01.png",
+                    "/images/maisedu/primeiro post/primeiro-post-mais-edu_02.png",
+                    "/images/maisedu/primeiro post/primeiro-post-mais-edu_03.png"
+                ], 
+                "data": "20 de novembro de 2023"
+            },
+            {
+                "username": "maisedubrasil",
+                "pfp": "/images/maisedu/logo.png",
+                "message": "Esse é um post para a Mais Edu, cliente da SouDigital.",
+                "images": [
+                    "/images/maisedu/post 25-11-23/maisedu-241123_01.png",
+                    "/images/maisedu/post 25-11-23/maisedu-241123_02.png",
+                    "/images/maisedu/post 25-11-23/maisedu-241123_03.png",
+                    "/images/maisedu/post 25-11-23/maisedu-241123_04.png",
+                    "/images/maisedu/post 25-11-23/maisedu-241123_05.png"
+                ], 
+                "data": "24 de novembro de 2023"
+            },
+            {
+                "username": "maisedubrasil",
+                "pfp": "/images/maisedu/logo.png",
+                "message": "Esse é um post para a Mais Edu, cliente da SouDigital.",
+                "images": [
+                    "/images/maisedu/post 01-12-23/mais-edu-291123_01.png",
+                    "/images/maisedu/post 01-12-23/mais-edu-291123_02.png",
+                    "/images/maisedu/post 01-12-23/mais-edu-291123_03.png",
+                    "/images/maisedu/post 01-12-23/mais-edu-291123_04.png",
+                    "/images/maisedu/post 01-12-23/mais-edu-291123_05.png"
+                ], 
+                "data": "01 de dezembro de 2023"
+            },
+            {
+                "username": "maisedubrasil",
+                "pfp": "/images/maisedu/logo.png",
+                "message": "Esse é um plano de carreira do sistema da Mais Edu, cliente da SouDigital.",
+                "images": [
+                    "/images/maisedu/plano de carreira/planode-carreira-maisedu_01.png",
+                    "/images/maisedu/plano de carreira/planode-carreira-maisedu_02.png",
+                    "/images/maisedu/plano de carreira/planode-carreira-maisedu_03.png"
+                ], 
+                "data": "Não postaram esse"
+            }
+        ]
+    }
+]

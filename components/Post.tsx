@@ -5,6 +5,7 @@ import { useState } from "react";
 import {
     DotsVertical,
     HeartOutline,
+    HeartFill,
     Comment,
     Send,
     BookmarkOutline,
@@ -17,8 +18,20 @@ const OPTIONS: EmblaOptionsType = { containScroll: "trimSnaps" };
 const SLIDE_COUNT = 5;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
-export default function Post() {
+interface PostProps {
+    username: string;
+    pfp: string;
+    message: string;
+    images: string[];
+    data: string;
+}
+
+export default function Post(post: PostProps | any) {
     const [isTruncated, setIsTruncated] = useState(true);
+
+    const [liked, setLiked] = useState(false);
+    const [bookmarked, setBookmarked] = useState(false);
+    const [likes, setLikes] = useState(100);
 
     return (
         <div
@@ -32,23 +45,22 @@ export default function Post() {
                 className={`
                     post-header
                     h-14 w-full
-                    border-b border-gray-800
+                    border-b border-neutral-800
                     flex items-center justify-between
                     pl-4 pr-2
                 `}
             >
                 <div className="flex items-center gap-3">
                     <Image
-                        src="/3.jpg"
-                        alt="Post Avatar"
+                        src={post.post.pfp}
+                        alt={`Ícone do perfil de ${post.post.username}`}
                         width={32}
                         height={32}
                         className={`
                             post-avatar
-                            h-8 w-8
-                            
+                            h-8 w-8                            
                             rounded-full
-                            bg-gray-400
+                            bg-neutral-200
                         `}
                     />
                     <div
@@ -57,7 +69,7 @@ export default function Post() {
                             text-sm font-medium
                         `}
                     >
-                        ric.marinho
+                        {post.post.username}
                     </div>
                 </div>
                 <DotsVertical />
@@ -66,25 +78,44 @@ export default function Post() {
                 className={`
                     post-image
                     w-full
-                    bg-gray-400
+                    bg-neutral-800
                 `}
+                onDoubleClick={() => {
+                    setLiked(!liked);
+                    if (liked) {
+                        setLikes(likes - 1);
+                    } else {
+                        setLikes(likes + 1);
+                    }
+                }}
             >
                 <div className="sandbox">
                     <div className="sandbox__carousel">
-                        <Carousel slides={SLIDES} options={OPTIONS} />
+                        <Carousel slides={post.post.images} options={OPTIONS} />
                     </div>
                 </div>
             </div>
             <div
                 className={`
                     h-12 w-full
-                    border-t border-gray-800
+                    border-t border-neutral-800
                     flex items-center justify-between
                     px-4
                 `}
             >
                 <div className="flex gap-4">
-                    <HeartOutline />
+                    <div
+                        onClick={() => {
+                            setLiked(!liked);
+                            if (liked) {
+                                setLikes(likes - 1);
+                            } else {
+                                setLikes(likes + 1);
+                            }
+                        }}
+                    >
+                        {liked ? <HeartFill /> : <HeartOutline />}
+                    </div>
                     <Comment />
                     <Send />
                 </div>
@@ -99,7 +130,7 @@ export default function Post() {
                     mb-1
                 `}
             >
-                100 curtidas
+                {likes} curtidas
             </div>
             <div
                 className={`
@@ -122,18 +153,16 @@ export default function Post() {
                             ${isTruncated ? "line-clamp-2" : "line-clamp-none"}
                         `}
                     >
-                    <span
-                        className={`
+                        <span
+                            className={`
                             post-username
                             text-sm font-medium
                             mr-1
                         `}
-                    >
-                        username
-                    </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quisquam, voluptatum. Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Quisquam, voluptatum.
+                        >
+                            {post.post.username}
+                        </span>
+                        {post.post.message}
                     </span>
                     <button
                         type="button"

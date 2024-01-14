@@ -1,27 +1,39 @@
-'use client';
+"use client";
 
-import { HomeOutline, HomeFill, SearchOutline, PlusFill, ReelsOutline, InstaSymbol } from "../icons/icons";
+import {
+    HomeOutline,
+    HomeFill,
+    SearchOutline,
+    PlusFill,
+    ReelsOutline,
+    InstaSymbol,
+} from "../icons/icons";
 import { usePathname } from "next/navigation";
 import { use, useEffect, useState } from "react";
 
 export default function Menu() {
-
-    const pathname = usePathname()
+    const pathname = usePathname();
     // console.log(pathname)
-    const [activeHome, setActiveHome] = useState(false)
-    const [activeInsta, setActiveInsta] = useState(false)
-    
+    const [activeHome, setActiveHome] = useState(false);
+    const [showMenu, setshowMenu] = useState(false);
+
     useEffect(() => {
         if (pathname === "/") {
-            setActiveHome(true)
+            setActiveHome(true);
         } else {
-            setActiveHome(false)
+            setActiveHome(false);
         }
-    }, [pathname])
 
+        if (pathname === "/message") {
+            setshowMenu(false);
+        } else {
+            setshowMenu(true);
+        }
+    }, [pathname]);
 
     return (
-        <div
+        showMenu && (
+            <div
                 className={`
                     footer
                     h-12 w-full
@@ -40,5 +52,6 @@ export default function Menu() {
                     <InstaSymbol />
                 </div>
             </div>
-    )
+        )
+    );
 }

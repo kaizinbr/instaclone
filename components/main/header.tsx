@@ -1,6 +1,7 @@
 "use client";
-import React, { useEffect, useRef, useState } from 'react';
-import { InstagramLogo, HeartOutline, MessageOutline } from '../icons/icons';
+import React, { useEffect, useRef, useState } from "react";
+import { InstagramLogo, HeartOutline, MessageOutline } from "../icons/icons";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
     const [scrollY, setScrollY] = useState(0);
@@ -25,9 +26,22 @@ export default function Header() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [scrollY]);
 
+    const pathname = usePathname();
+
+    const [showHeader, setShowHeader] = useState(false);
+
+    useEffect(() => {
+        if (pathname === "/message") {
+            setShowHeader(false);
+        } else {
+            setShowHeader(true);
+        }
+    }, [pathname]);
+
     return (
-        <div
-                className={`
+        showHeader && (
+            <div
+            className={`
                     header-top
                     h-14 w-full
                     border-b 
@@ -45,13 +59,12 @@ export default function Header() {
 
                     ${scrollY > 0 ? "border-gray-800" : "border-transparent"}
                 `}
-                
-            >
-                <InstagramLogo />
-                <div className="flex gap-6">
-                    <HeartOutline />
-                    <MessageOutline />
-                </div>
+        >
+            <InstagramLogo />
+            <div className="flex gap-6">
+                <HeartOutline />
+                <MessageOutline />
             </div>
-    )
+        </div>)
+    );
 }
