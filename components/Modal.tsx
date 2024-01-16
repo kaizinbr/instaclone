@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Modal({showModal, setShowModal}: {showModal: boolean, setShowModal: any}) {
@@ -115,7 +116,7 @@ export default function Modal({showModal, setShowModal}: {showModal: boolean, se
                             , que tem tudo importante sobre meus projetos de
                             design e programação. <br />
                         </p>
-                                <Link
+                                <motion.a
                                     href="https://bento.me/kaizin"
                                     target="_blank"
                                     className={`
@@ -125,9 +126,12 @@ export default function Modal({showModal, setShowModal}: {showModal: boolean, se
                                         font-bold
 
                                     `}
+                                    whileTap={{ scale: 0.8 }}
+                                    transition={{ duration: 0.3 }}
+                                    
                                 >
                                     bento.me/kaizin
-                                </Link>
+                                </motion.a>
                         
                     </div>
                 </div>

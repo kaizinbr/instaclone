@@ -12,6 +12,7 @@
     "@tailwindcss/line-clamp": "^0.4.4",
     "embla-carousel": "^8.0.0-rc19",
     "embla-carousel-react": "^8.0.0-rc19",
+    "framer-motion": "^10.18.0",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",

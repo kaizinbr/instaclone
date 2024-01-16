@@ -4,6 +4,7 @@ import Image from "next/image";
 import { HiPlus } from "react-icons/hi";
 import { useEffect, useState } from "react";
 import Modal from "../Modal";
+import { motion } from "framer-motion";
 
 export default function Stories() {
     const [showModal, setShowModal] = useState(true);
@@ -82,10 +83,13 @@ export default function Stories() {
                         </div>
                         <span className="text-xs">Seu story</span>
                     </div>
-                    <button className="flex flex-col items-center"
+                    <motion.button className="flex flex-col items-center"
                         onClick={() => {
                             setShowModal(false);
-                        }}
+                        }}                        
+                        whileTap={{ scale: 0.8 }}
+                        transition={{ duration: 0.3 }}
+                        
                     >
                         <div
                             className={`
@@ -116,7 +120,7 @@ export default function Stories() {
                             </div>
                         </div>
                         <span className="text-xs">Contato</span>
-                    </button>
+                    </motion.button>
                     <div className="flex flex-col items-center">
                         <div
                             className={`
