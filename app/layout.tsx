@@ -61,7 +61,7 @@ export default function RootLayout({
 
             <body className={inter.className}>
                 <Header />
-                <main className="mt-14 mb-12">
+                <main className="mt-14 md:mt-10 mb-12">
                 {children}
                 </main>
                 <Menu />

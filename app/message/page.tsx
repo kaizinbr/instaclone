@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 const MessagePage: React.FC = () => {
     return (
-        <div className="flex flex-col ">
-            <div className="flex-1 overflow-y-auto">
+        <div className="flex  ">
+            <div className="flex-1 max-w-3xl m-auto">
                 <div className="flex flex-col items-center justify-start h-full mt-7">
                     <Image
                         src="/pfp.jpg"

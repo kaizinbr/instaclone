@@ -20,7 +20,9 @@ const Carousel: React.FC<PropType> = (props) => {
 
     return (
         <div className="embla">
-            <div className="embla__viewport" ref={emblaRef}>
+            <div className="embla__viewport 
+                    bg-neutral-800
+                    border border-neutral-800 rounded-md overflow-hidden" ref={emblaRef}>
                 <div className="embla__container">
                     {slides.map((slide, index) => (
                         <div className="embla__slide" key={index}>

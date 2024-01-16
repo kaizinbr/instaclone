@@ -50,6 +50,8 @@ export default function Header() {
                     flex items-center justify-between
                     px-4
 
+                    md:hidden
+
                     transition-transform duration-200 ease-in-out
                     ${
                         scrollDirection === "up"

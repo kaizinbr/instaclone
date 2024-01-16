@@ -33,6 +33,7 @@ export default function Post(post: PostProps | any) {
     const [bookmarked, setBookmarked] = useState(false);
     const [likes, setLikes] = useState(100);
 
+
     return (
         <div
             className={`
@@ -45,7 +46,6 @@ export default function Post(post: PostProps | any) {
                 className={`
                     post-header
                     h-14 w-full
-                    border-b border-neutral-800
                     flex items-center justify-between
                     pl-4 pr-2
                 `}
@@ -78,7 +78,6 @@ export default function Post(post: PostProps | any) {
                 className={`
                     post-image
                     w-full
-                    bg-neutral-800
                 `}
                 onDoubleClick={() => {
                     setLiked(!liked);
@@ -89,7 +88,7 @@ export default function Post(post: PostProps | any) {
                     }
                 }}
             >
-                <div className="sandbox">
+                <div className="sandbox ">
                     <div className="sandbox__carousel">
                         <Carousel slides={post.post.images} options={OPTIONS} />
                     </div>
@@ -98,7 +97,6 @@ export default function Post(post: PostProps | any) {
             <div
                 className={`
                     h-12 w-full
-                    border-t border-neutral-800
                     flex items-center justify-between
                     px-4
                 `}
